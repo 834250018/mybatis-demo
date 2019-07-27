@@ -1,5 +1,6 @@
 package com.ywy.mybatisdemo.controller;
 
+import com.ywy.mybatisdemo.dto.UserDTO;
 import com.ywy.mybatisdemo.entity.User;
 import com.ywy.mybatisdemo.service.UserService;
 import com.ywy.mybatisdemo.vo.UserVO;
@@ -8,12 +9,13 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author ve
@@ -28,15 +30,50 @@ public class UserController {
     @Autowired
     public UserService userService;
 
-    @ApiOperation(value = "根据id查询用户")
+    @ApiOperation(value = "用户-one")
     @GetMapping("/one")
-    public UserVO getUserById(@NotBlank @RequestParam("id") String id) {
-        User user = userService.getUserById(id);
+    public UserVO one(@NotBlank @RequestParam("id") String id) {
+        User user = userService.one(id);
         UserVO userVO = new UserVO();
-        if(user == null) {
+        if (user == null) {
             return null;
         }
         BeanUtils.copyProperties(user, userVO);
         return userVO;
+    }
+
+    @ApiOperation(value = "用户-list")
+    @GetMapping("/list")
+    public List<UserVO> list(@NotEmpty @RequestParam("ids") Set<String> ids) {
+        List<User> users = userService.list(ids);
+        List<UserVO> userVOS = new LinkedList<>();
+        users.forEach(user -> {
+            UserVO userVO = new UserVO();
+            BeanUtils.copyProperties(user, userVO);
+            userVOS.add(userVO);
+        });
+        return userVOS;
+    }
+
+    @ApiOperation(value = "创建用户")
+    @PostMapping("/create")
+    public void create(UserDTO userDTO) {
+        User user = new User();
+        BeanUtils.copyProperties(userDTO, user);
+        userService.insert(user);
+    }
+
+    @ApiOperation(value = "删除用户")
+    @DeleteMapping("/remove")
+    public void getUserById(UserDTO userDTO) {
+        userService.delete(userDTO.getId());
+    }
+
+    @ApiOperation(value = "修改用户")
+    @PutMapping("/update")
+    public void update(UserDTO userDTO) {
+        User user = new User();
+        BeanUtils.copyProperties(userDTO, user);
+        userService.update(user);
     }
 }

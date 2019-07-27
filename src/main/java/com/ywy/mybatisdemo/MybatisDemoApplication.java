@@ -21,9 +21,6 @@ public class MybatisDemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        User user = userMapper.getById("ywy");
-//        if(user != null) {
-//            System.out.println(user.toString());
-//        }
+
     }
 }
