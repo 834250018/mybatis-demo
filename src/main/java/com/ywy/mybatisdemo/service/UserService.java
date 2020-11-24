@@ -1,10 +1,8 @@
 package com.ywy.mybatisdemo.service;
 
 import com.ywy.mybatisdemo.entity.User;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author ve
@@ -12,13 +10,13 @@ import java.util.Set;
  */
 public interface UserService {
 
-    public User one(String id);
+    User one(String id);
 
-    public List<User> list(Set<String> ids);
+    List<User> list();
 
-    public void insert(User user);
+    void insert(User user);
 
-    public void delete(String id);
+    void delete(String id);
 
-    public void update(User user);
+    void update(User user);
 }

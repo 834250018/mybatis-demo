@@ -1,13 +1,14 @@
 package com.ywy.mybatisdemo.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.ywy.mybatisdemo.entity.User;
 import com.ywy.mybatisdemo.mapper.UserMapper;
+import com.ywy.mybatisdemo.mapper.UserMapper1;
 import com.ywy.mybatisdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author ve
@@ -18,6 +19,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    UserMapper1 userMapper1;
 
     @Override
     public User one(String id) {
@@ -25,13 +28,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> list(Set<String> ids) {
-        return userMapper.list(ids);
+    public List<User> list() {
+        PageHelper.startPage(1, 10);
+        return userMapper.list();
     }
 
     @Override
     public void insert(User user) {
-        userMapper.insert(user);
+        //        userMapper.insert(user);
+        userMapper.insert1(user);
+        //        userMapper1.insert2(user);
     }
 
     @Override

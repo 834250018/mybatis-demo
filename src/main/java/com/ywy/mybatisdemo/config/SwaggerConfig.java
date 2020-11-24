@@ -26,7 +26,7 @@ import java.util.List;
 public class SwaggerConfig {
     @Bean
     public Docket customDocket() {
-        Docket docket=new Docket(DocumentationType.SWAGGER_2);
+        Docket docket = new Docket(DocumentationType.SWAGGER_2);
 
         ParameterBuilder userTokenPar = new ParameterBuilder();
         List<Parameter> pars = new ArrayList<>();
@@ -35,7 +35,7 @@ public class SwaggerConfig {
                 .parameterType("header").defaultValue("86ca3056-38b1-4a7c-a128-951df2261edd")
                 .required(false).build();
         pars.add(userTokenPar.build());
-        docket=docket.apiInfo(apiInfo())
+        docket = docket.apiInfo(apiInfo())
                 .useDefaultResponseMessages(false)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.ywy.mybatisdemo.controller"))

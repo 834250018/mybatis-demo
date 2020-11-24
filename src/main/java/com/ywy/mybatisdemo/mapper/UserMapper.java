@@ -17,8 +17,11 @@ public interface UserMapper {
     @Select("select * from user where id = #{id}")
     User one(String id);
 
+    @Select("select * from user")
+    List<User> list();
+
     @Select("<script>select * from user where id in <foreach collection='ids' item='id' open='(' separator=',' close=')'>#{id}</foreach></script>")
-    List<User> list(@Param("ids") Set<String> ids);
+    List<User> list1(@Param("ids") Set<String> ids);
 
     @Insert("insert into user (id, username, password, realname) values (#{id},#{username},#{password},#{realname})")
     void insert(User user);
@@ -28,4 +31,6 @@ public interface UserMapper {
 
     @Update("update user set username = #{username}, password = #{password}, realname = #{realname} where id = #{id}")
     void update(User user);
+
+    void insert1(User user);
 }

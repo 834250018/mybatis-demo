@@ -1,12 +1,17 @@
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3307/test?useUnicode=true&characterEncodding=utf-8&true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncodding=utf-8&true&serverTimezone=UTC
     username: root
-    password: 123456
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
   mapper-locations: classpath:mapping/*Mapping.xml
   type-aliases-package: com.ywy.mybatisdemo.entity
 server:
   port: 8081
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

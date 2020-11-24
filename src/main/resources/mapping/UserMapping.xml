@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ywy.mybatisdemo.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.ywy.mybatisdemo.entity.User">
+        <result column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="username"/>
+        <result column="realname" jdbcType="VARCHAR" property="username"/>
+    </resultMap>
+
+    <insert id="insert1" parameterType="com.ywy.mybatisdemo.entity.User">
+        insert into user (id, username, password, realname) values (#{id},#{username},#{password},#{realname})
+    </insert>
+
+    <insert id="insert2" parameterType="com.ywy.mybatisdemo.entity.User">
+        insert into user (id, username, password, realname) values (#{id},#{username},#{password},#{realname})
+    </insert>
+
+</mapper>

@@ -44,8 +44,8 @@ public class UserController {
 
     @ApiOperation(value = "用户-list")
     @GetMapping("/list")
-    public List<UserVO> list(@NotEmpty @RequestParam("ids") Set<String> ids) {
-        List<User> users = userService.list(ids);
+    public List<UserVO> list(@NotEmpty @RequestParam(value = "ids", required = false) Set<String> ids) {
+        List<User> users = userService.list();
         List<UserVO> userVOS = new LinkedList<>();
         users.forEach(user -> {
             UserVO userVO = new UserVO();
