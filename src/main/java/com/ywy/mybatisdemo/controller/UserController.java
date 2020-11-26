@@ -12,7 +12,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -44,7 +43,7 @@ public class UserController {
 
     @ApiOperation(value = "用户-list")
     @GetMapping("/list")
-    public List<UserVO> list(@NotEmpty @RequestParam(value = "ids", required = false) Set<String> ids) {
+    public List<UserVO> list(@RequestParam(value = "ids", required = false) Set<String> ids) {
         List<User> users = userService.list();
         List<UserVO> userVOS = new LinkedList<>();
         users.forEach(user -> {
@@ -61,6 +60,22 @@ public class UserController {
         User user = new User();
         BeanUtils.copyProperties(userDTO, user);
         userService.insert(user);
+    }
+
+    @ApiOperation(value = "创建用户1,声明式事务")
+    @PostMapping("/create1")
+    public void create1(UserDTO userDTO) {
+        User user = new User();
+        BeanUtils.copyProperties(userDTO, user);
+        userService.insert1(user);
+    }
+
+    @ApiOperation(value = "创建用户2,程序化事务")
+    @PostMapping("/create2")
+    public void create2(UserDTO userDTO) {
+        User user = new User();
+        BeanUtils.copyProperties(userDTO, user);
+        userService.insert2(user);
     }
 
     @ApiOperation(value = "删除用户")

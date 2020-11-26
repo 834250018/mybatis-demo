@@ -22,6 +22,7 @@ public class IdSelectVisitor implements SelectVisitor {
         EqualsTo equalsTo = new EqualsTo();
         equalsTo.setLeftExpression(new Column("id"));
         equalsTo.setRightExpression(new StringValue("11"));
+        equalsTo.setRightExpression(new StringValue("11"));
         if (plainSelect.getWhere() == null) {
             plainSelect.setWhere(equalsTo);
         } else {

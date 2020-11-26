@@ -15,6 +15,8 @@ public interface UserService {
     List<User> list();
 
     void insert(User user);
+    void insert1(User user);
+    void insert2(User user);
 
     void delete(String id);
 
