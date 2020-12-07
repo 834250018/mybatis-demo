@@ -1,0 +1,152 @@
+2020-12-05 15:24:11  [ main:0 ] - [ INFO ]  using logger: org.apache.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2020-12-05 15:24:13  [ main:2381 ] - [ INFO ]   [DUBBO] BeanNameGenerator bean can't be found in BeanFactory with name [org.springframework.context.annotation.internalConfigurationBeanNameGenerator], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:13  [ main:2382 ] - [ INFO ]   [DUBBO] BeanNameGenerator will be a instance of org.springframework.context.annotation.AnnotationBeanNameGenerator , it maybe a potential problem on bean name generation., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:13  [ main:2387 ] - [ WARN ]   [DUBBO] No Spring Bean annotating Dubbo's @Service was found under package[com.ywy.mybatisdemo.service], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ main:6196 ] - [ INFO ]   [DUBBO] No value is configured in the registry, the DynamicConfigurationFactory extension[name : zookeeper] supports as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ main:6197 ] - [ INFO ]   [DUBBO] The registry[<dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" port="2181" />] will be used as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ main:6212 ] - [ DEBUG ]   [DUBBO] package org.apache.dubbo.remoting.zookeeper;
+import org.apache.dubbo.common.extension.ExtensionLoader;
+public class ZookeeperTransporter$Adaptive implements org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter {
+public org.apache.dubbo.remoting.zookeeper.ZookeeperClient connect(org.apache.dubbo.common.URL arg0)  {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+org.apache.dubbo.common.URL url = arg0;
+String extName = url.getParameter("client", url.getParameter("transporter", "curator"));
+if(extName == null) throw new IllegalStateException("Failed to get extension (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter) name from url (" + url.toString() + ") use keys([client, transporter])");
+org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter extension = (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter)ExtensionLoader.getExtensionLoader(org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter.class).getExtension(extName);
+return extension.connect(arg0);
+}
+}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ main:6346 ] - [ INFO ]   [DUBBO] Close all registries [], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ main:6353 ] - [ DEBUG ]   [DUBBO] DubboBootstrap's all ServiceDiscoveries have been destroyed., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ main:6354 ] - [ DEBUG ]   [DUBBO] DubboBootstrap's configs have been clear., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ main:6354 ] - [ INFO ]   [DUBBO] DubboBootstrap is about to shutdown..., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ DubboShutdownHook:6365 ] - [ INFO ]   [DUBBO] Run shutdown hook now., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:24:17  [ DubboShutdownHook:6368 ] - [ INFO ]   [DUBBO] Dubbo Service has been destroyed., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:50:53  [ main:0 ] - [ INFO ]  using logger: org.apache.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2020-12-05 15:50:56  [ main:2157 ] - [ INFO ]   [DUBBO] BeanNameGenerator bean can't be found in BeanFactory with name [org.springframework.context.annotation.internalConfigurationBeanNameGenerator], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:50:56  [ main:2157 ] - [ INFO ]   [DUBBO] BeanNameGenerator will be a instance of org.springframework.context.annotation.AnnotationBeanNameGenerator , it maybe a potential problem on bean name generation., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:50:56  [ main:2161 ] - [ WARN ]   [DUBBO] No Spring Bean annotating Dubbo's @Service was found under package[com.ywy.mybatisdemo.service], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:50:59  [ main:5695 ] - [ INFO ]   [DUBBO] No value is configured in the registry, the DynamicConfigurationFactory extension[name : zookeeper] supports as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:50:59  [ main:5696 ] - [ INFO ]   [DUBBO] The registry[<dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" port="2181" />] will be used as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:50:59  [ main:5710 ] - [ DEBUG ]   [DUBBO] package org.apache.dubbo.remoting.zookeeper;
+import org.apache.dubbo.common.extension.ExtensionLoader;
+public class ZookeeperTransporter$Adaptive implements org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter {
+public org.apache.dubbo.remoting.zookeeper.ZookeeperClient connect(org.apache.dubbo.common.URL arg0)  {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+org.apache.dubbo.common.URL url = arg0;
+String extName = url.getParameter("client", url.getParameter("transporter", "curator"));
+if(extName == null) throw new IllegalStateException("Failed to get extension (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter) name from url (" + url.toString() + ") use keys([client, transporter])");
+org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter extension = (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter)ExtensionLoader.getExtensionLoader(org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter.class).getExtension(extName);
+return extension.connect(arg0);
+}
+}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6102 ] - [ INFO ]   [DUBBO] No valid zookeeper client found from cache, therefore create a new client for url. zookeeper://127.0.0.1:2181/ConfigCenterConfig?check=true&config-file=dubbo.properties&highest-priority=false&timeout=3000, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ Curator-ConnectionStateManager-0:6102 ] - [ INFO ]   [DUBBO] Curator zookeeper client instance initiated successfully, session id is 10042116fb90000, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ ZookeeperDynamicConfiguration-thread-1:6146 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:null, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6162 ] - [ WARN ]   [DUBBO] You specified the config center, but there's not even one single config item in it., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6162 ] - [ WARN ]   [DUBBO] You specified the config center, but there's not even one single config item in it., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6194 ] - [ INFO ]   [DUBBO] There's no valid monitor config found, if you want to open monitor statistics for Dubbo, please make sure your monitor is configured properly., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6209 ] - [ INFO ]   [DUBBO] No value is configured in the registry, the MetadataReportFactory extension[name : zookeeper] supports as the metadata center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6210 ] - [ INFO ]   [DUBBO] The registry[<dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" port="2181" />] will be used as the metadata center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6212 ] - [ DEBUG ]   [DUBBO] package org.apache.dubbo.metadata.report;
+import org.apache.dubbo.common.extension.ExtensionLoader;
+public class MetadataReportFactory$Adaptive implements org.apache.dubbo.metadata.report.MetadataReportFactory {
+public org.apache.dubbo.metadata.report.MetadataReport getMetadataReport(org.apache.dubbo.common.URL arg0)  {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+org.apache.dubbo.common.URL url = arg0;
+String extName = ( url.getProtocol() == null ? "redis" : url.getProtocol() );
+if(extName == null) throw new IllegalStateException("Failed to get extension (org.apache.dubbo.metadata.report.MetadataReportFactory) name from url (" + url.toString() + ") use keys([protocol])");
+org.apache.dubbo.metadata.report.MetadataReportFactory extension = (org.apache.dubbo.metadata.report.MetadataReportFactory)ExtensionLoader.getExtensionLoader(org.apache.dubbo.metadata.report.MetadataReportFactory.class).getExtension(extName);
+return extension.getMetadataReport(arg0);
+}
+}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6231 ] - [ INFO ]   [DUBBO] find valid zookeeper client from the cache for address: zookeeper://127.0.0.1:2181/org.apache.dubbo.metadata.report.MetadataReport?client=&dubbo.config-center.root-path=/, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ ZookeeperDynamicConfiguration-thread-1:6235 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/', stat=0,0,0,0,0,-1,0,0,0,1,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ ZookeeperDynamicConfiguration-thread-1:6237 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/zookeeper', stat=0,0,0,0,0,-2,0,0,0,2,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ ZookeeperDynamicConfiguration-thread-1:6238 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/zookeeper/config', stat=0,0,0,0,0,0,-1,0,0,0,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ ZookeeperDynamicConfiguration-thread-1:6239 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/zookeeper/quota', stat=0,0,0,0,0,0,0,0,0,0,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ ZookeeperDynamicConfiguration-thread-1:6239 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:null, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6249 ] - [ INFO ]   [DUBBO] DubboBootstrap has been initialized!, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6249 ] - [ INFO ]   [DUBBO] DubboBootstrap is starting..., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6254 ] - [ INFO ]   [DUBBO] DubboBootstrap is ready., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:51:00  [ main:6254 ] - [ INFO ]   [DUBBO] DubboBootstrap has started., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:31  [ main:1 ] - [ INFO ]  using logger: org.apache.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2020-12-05 15:54:33  [ main:2118 ] - [ INFO ]   [DUBBO] BeanNameGenerator bean can't be found in BeanFactory with name [org.springframework.context.annotation.internalConfigurationBeanNameGenerator], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:33  [ main:2119 ] - [ INFO ]   [DUBBO] BeanNameGenerator will be a instance of org.springframework.context.annotation.AnnotationBeanNameGenerator , it maybe a potential problem on bean name generation., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:33  [ main:2123 ] - [ WARN ]   [DUBBO] No Spring Bean annotating Dubbo's @Service was found under package[com.ywy.mybatisdemo.service], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:37  [ main:5753 ] - [ INFO ]   [DUBBO] No value is configured in the registry, the DynamicConfigurationFactory extension[name : zookeeper] supports as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:37  [ main:5754 ] - [ INFO ]   [DUBBO] The registry[<dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" port="2181" />] will be used as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:37  [ main:5768 ] - [ DEBUG ]   [DUBBO] package org.apache.dubbo.remoting.zookeeper;
+import org.apache.dubbo.common.extension.ExtensionLoader;
+public class ZookeeperTransporter$Adaptive implements org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter {
+public org.apache.dubbo.remoting.zookeeper.ZookeeperClient connect(org.apache.dubbo.common.URL arg0)  {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+org.apache.dubbo.common.URL url = arg0;
+String extName = url.getParameter("client", url.getParameter("transporter", "curator"));
+if(extName == null) throw new IllegalStateException("Failed to get extension (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter) name from url (" + url.toString() + ") use keys([client, transporter])");
+org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter extension = (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter)ExtensionLoader.getExtensionLoader(org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter.class).getExtension(extName);
+return extension.connect(arg0);
+}
+}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:40  [ main:9009 ] - [ INFO ]   [DUBBO] Close all registries [], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:40  [ main:9017 ] - [ DEBUG ]   [DUBBO] DubboBootstrap's all ServiceDiscoveries have been destroyed., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:40  [ main:9017 ] - [ DEBUG ]   [DUBBO] DubboBootstrap's configs have been clear., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:40  [ main:9018 ] - [ INFO ]   [DUBBO] DubboBootstrap is about to shutdown..., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:40  [ DubboShutdownHook:9023 ] - [ INFO ]   [DUBBO] Run shutdown hook now., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:40  [ DubboShutdownHook:9026 ] - [ INFO ]   [DUBBO] Dubbo Service has been destroyed., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:54:58  [ main:0 ] - [ INFO ]  using logger: org.apache.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2020-12-05 15:55:00  [ main:2131 ] - [ INFO ]   [DUBBO] BeanNameGenerator bean can't be found in BeanFactory with name [org.springframework.context.annotation.internalConfigurationBeanNameGenerator], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:00  [ main:2131 ] - [ INFO ]   [DUBBO] BeanNameGenerator will be a instance of org.springframework.context.annotation.AnnotationBeanNameGenerator , it maybe a potential problem on bean name generation., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:00  [ main:2135 ] - [ WARN ]   [DUBBO] No Spring Bean annotating Dubbo's @Service was found under package[com.ywy.mybatisdemo.service], dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:5684 ] - [ INFO ]   [DUBBO] No value is configured in the registry, the DynamicConfigurationFactory extension[name : zookeeper] supports as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:5684 ] - [ INFO ]   [DUBBO] The registry[<dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" port="2181" />] will be used as the config center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:5700 ] - [ DEBUG ]   [DUBBO] package org.apache.dubbo.remoting.zookeeper;
+import org.apache.dubbo.common.extension.ExtensionLoader;
+public class ZookeeperTransporter$Adaptive implements org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter {
+public org.apache.dubbo.remoting.zookeeper.ZookeeperClient connect(org.apache.dubbo.common.URL arg0)  {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+org.apache.dubbo.common.URL url = arg0;
+String extName = url.getParameter("client", url.getParameter("transporter", "curator"));
+if(extName == null) throw new IllegalStateException("Failed to get extension (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter) name from url (" + url.toString() + ") use keys([client, transporter])");
+org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter extension = (org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter)ExtensionLoader.getExtensionLoader(org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter.class).getExtension(extName);
+return extension.connect(arg0);
+}
+}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6056 ] - [ INFO ]   [DUBBO] No valid zookeeper client found from cache, therefore create a new client for url. zookeeper://127.0.0.1:2181/ConfigCenterConfig?check=true&config-file=dubbo.properties&highest-priority=false&timeout=3000, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ Curator-ConnectionStateManager-0:6057 ] - [ INFO ]   [DUBBO] Curator zookeeper client instance initiated successfully, session id is 10042116fb90001, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ ZookeeperDynamicConfiguration-thread-1:6094 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:null, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6110 ] - [ WARN ]   [DUBBO] You specified the config center, but there's not even one single config item in it., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6111 ] - [ WARN ]   [DUBBO] You specified the config center, but there's not even one single config item in it., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6145 ] - [ INFO ]   [DUBBO] There's no valid monitor config found, if you want to open monitor statistics for Dubbo, please make sure your monitor is configured properly., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6182 ] - [ INFO ]   [DUBBO] No value is configured in the registry, the MetadataReportFactory extension[name : zookeeper] supports as the metadata center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6183 ] - [ INFO ]   [DUBBO] The registry[<dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" port="2181" />] will be used as the metadata center, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6185 ] - [ DEBUG ]   [DUBBO] package org.apache.dubbo.metadata.report;
+import org.apache.dubbo.common.extension.ExtensionLoader;
+public class MetadataReportFactory$Adaptive implements org.apache.dubbo.metadata.report.MetadataReportFactory {
+public org.apache.dubbo.metadata.report.MetadataReport getMetadataReport(org.apache.dubbo.common.URL arg0)  {
+if (arg0 == null) throw new IllegalArgumentException("url == null");
+org.apache.dubbo.common.URL url = arg0;
+String extName = ( url.getProtocol() == null ? "redis" : url.getProtocol() );
+if(extName == null) throw new IllegalStateException("Failed to get extension (org.apache.dubbo.metadata.report.MetadataReportFactory) name from url (" + url.toString() + ") use keys([protocol])");
+org.apache.dubbo.metadata.report.MetadataReportFactory extension = (org.apache.dubbo.metadata.report.MetadataReportFactory)ExtensionLoader.getExtensionLoader(org.apache.dubbo.metadata.report.MetadataReportFactory.class).getExtension(extName);
+return extension.getMetadataReport(arg0);
+}
+}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6201 ] - [ INFO ]   [DUBBO] find valid zookeeper client from the cache for address: zookeeper://127.0.0.1:2181/org.apache.dubbo.metadata.report.MetadataReport?client=&dubbo.config-center.root-path=/, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ ZookeeperDynamicConfiguration-thread-1:6209 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/', stat=0,0,0,0,0,-1,0,0,0,1,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ ZookeeperDynamicConfiguration-thread-1:6209 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/zookeeper', stat=0,0,0,0,0,-2,0,0,0,2,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ ZookeeperDynamicConfiguration-thread-1:6210 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/zookeeper/config', stat=0,0,0,0,0,0,-1,0,0,0,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ ZookeeperDynamicConfiguration-thread-1:6210 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:ChildData{path='/zookeeper/quota', stat=0,0,0,0,0,0,0,0,0,0,0
+, data=[]}, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ ZookeeperDynamicConfiguration-thread-1:6211 ] - [ DEBUG ]   [DUBBO] listen the zookeeper changed. The changed data:null, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6222 ] - [ INFO ]   [DUBBO] DubboBootstrap has been initialized!, dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6222 ] - [ INFO ]   [DUBBO] DubboBootstrap is starting..., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6227 ] - [ INFO ]   [DUBBO] DubboBootstrap is ready., dubbo version: 2.7.8, current host: 172.18.57.241
+2020-12-05 15:55:04  [ main:6227 ] - [ INFO ]   [DUBBO] DubboBootstrap has started., dubbo version: 2.7.8, current host: 172.18.57.241

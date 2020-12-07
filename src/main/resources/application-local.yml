@@ -1,5 +1,7 @@
 
 spring:
+  application:
+    name: mydemo
   datasource:
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncodding=utf-8&true&serverTimezone=UTC
     username: root
@@ -15,3 +17,16 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+dubbo:
+  application:
+    name: demo_provider
+  registry:
+    protocol: zookeeper
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.ywy.mybatisdemo.service
+
+

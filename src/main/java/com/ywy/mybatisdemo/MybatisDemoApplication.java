@@ -28,8 +28,8 @@ public class MybatisDemoApplication
         //得到Preson，并使用
         Person person = run.getBean("person", Person.class);
         System.out.println(person);
-        System.out.println("现在开始关闭容器...");
-        run.registerShutdownHook();
+//        System.out.println("现在开始关闭容器...");
+//        run.registerShutdownHook();
     }
 
     /**
