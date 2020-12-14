@@ -44,17 +44,17 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.dubbo/dubbo
 //    compile group: 'org.apache.dubbo', name: 'dubbo', version: '2.7.8'
     // https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter
-    compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-starter', version: '2.7.8'
+//    compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-starter', version: '2.7.8'
 
 // https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper
-    compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.6.2'
+//    compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.6.2'
     // https://mvnrepository.com/artifact/com.101tec/zkclient
-    compile group: 'com.101tec', name: 'zkclient', version: '0.11'
+//    compile group: 'com.101tec', name: 'zkclient', version: '0.11'
 
     // https://mvnrepository.com/artifact/org.apache.curator/curator-recipes
-    compile group: 'org.apache.curator', name: 'curator-recipes', version: '5.1.0'
+//    compile group: 'org.apache.curator', name: 'curator-recipes', version: '5.1.0'
 // https://mvnrepository.com/artifact/org.apache.curator/curator-framework
-    compile group: 'org.apache.curator', name: 'curator-framework', version: '5.1.0'
+//    compile group: 'org.apache.curator', name: 'curator-framework', version: '5.1.0'
 
 
 }
