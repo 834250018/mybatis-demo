@@ -1,4 +1,4 @@
-package com.ywy.mybatisdemo.vo;
+package com.ywy.mybatisdemo.pojo;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

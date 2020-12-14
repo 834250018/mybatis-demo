@@ -3,7 +3,7 @@ package com.ywy.mybatisdemo.controller;
 import com.ywy.mybatisdemo.dto.UserDTO;
 import com.ywy.mybatisdemo.entity.User;
 import com.ywy.mybatisdemo.service.UserService;
-import com.ywy.mybatisdemo.vo.UserVO;
+import com.ywy.mybatisdemo.pojo.UserVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;

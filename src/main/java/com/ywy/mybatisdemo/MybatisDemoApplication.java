@@ -4,7 +4,7 @@ import com.ywy.mybatisdemo.config.MyConfig;
 import com.ywy.mybatisdemo.interceptor.IdInterceptor;
 import com.ywy.mybatisdemo.mapper.UserMapper;
 import com.ywy.mybatisdemo.pojo.Person;
-import com.ywy.mybatisdemo.vo.TestExecutor;
+import com.ywy.mybatisdemo.service.ExecutorService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -48,7 +48,7 @@ public class MybatisDemoApplication
     }
 
     @Autowired
-    private TestExecutor testExecutor;
+    private ExecutorService executorService;
 
     @Autowired
     private Executor myExecutor;
@@ -69,7 +69,7 @@ public class MybatisDemoApplication
     private void startTest() throws InterruptedException {
         final int idx = i++;
         Thread.sleep(1000L);
-        testExecutor.testRunnable(() -> {
+        executorService.testRunnable(() -> {
             while (true) {
                 System.out.println("执行顺序:" + idx + ", 执行线程" + Thread.currentThread().getName());
                 try {
